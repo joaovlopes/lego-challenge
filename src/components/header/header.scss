@@ -1,0 +1,87 @@
+@import '@/styles/variables/colors.scss';
+
+$widthIconDefault: 1.5rem;
+$heightIconDefault: 1.5rem;
+
+@mixin sizeIconDefault ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.headerContainer {
+    height: 5rem;
+    padding: 0 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .actionsMenu {
+        display: flex;
+        gap: 1rem;
+
+        .actionOption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+
+            .categoriesIcon {
+                width: 2rem;
+                height: 1.6875rem;
+            }
+
+            .searchIcon, .requestIcon {
+                @include sizeIconDefault($widthIconDefault, $heightIconDefault)
+            }
+
+            .categoryText {
+                font-size: 0.8125rem;
+            }
+        }
+    }
+
+    .brandLogo {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &Drawer {
+            padding: 1.25rem 5%;
+        }
+    }
+}
+
+.brandLogoDrawer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 1.25rem 5%;
+
+    .closeOutlinedIcon {
+        cursor: pointer;
+    }
+}
+
+.sectionMenu {
+    .sectionOption {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            @include sizeIconDefault($widthIconDefault, $heightIconDefault)
+        }
+    }
+
+    .sectionBrand {
+        text-align: center;
+        align-items: center;
+
+        border-top: 0.5px $blue-xlight solid;
+
+        &:last-child {
+            border-bottom: 0.5px $blue-xlight solid;
+        }
+    }
+}
