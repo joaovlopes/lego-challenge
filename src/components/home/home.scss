@@ -1,5 +1,12 @@
 @import '@/styles/variables/colors.scss';
 
 h1 {
-    color: $blue-500;
+    color: $text-one;
+}
+
+.videoTeste {
+    text-align: center;
+    place-content: center;
+    background-color: $blue-brand;
+    height: 375px;
 }
