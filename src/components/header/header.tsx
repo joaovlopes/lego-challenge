@@ -164,7 +164,7 @@ function Header() {
 
           <List className='sectionMenu'>
             {brandsMenu.map((brand) => (
-              <div className='sectionBrand'>
+              <div className='sectionBrand' key={brand.name}>
                 <img src={brand.image} alt={brand.name + 'Brand image'} />
               </div>
             ))}
@@ -212,7 +212,7 @@ function Header() {
                         alt="Search icon"
                         className='searchIcon'
                     />
-                    <span className='categoryText'>Search</span>
+                    <span className='actionText'>Search</span>
                 </div>
 
                 <div 
@@ -224,7 +224,7 @@ function Header() {
                         alt="Request icon"
                         className='requestIcon'
                     />
-                    <span className='categoryText'>Request</span>
+                    <span className='actionText'>Request</span>
                 </div>
             </div>
         </div>

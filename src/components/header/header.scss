@@ -24,6 +24,7 @@ $heightIconDefault: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+
             cursor: pointer;
 
             .categoriesIcon {
@@ -37,6 +38,10 @@ $heightIconDefault: 1.5rem;
 
             .categoryText {
                 font-size: 0.8125rem;
+            }
+
+            .categoriesIcon, .categoryText:hover {
+                color: $blue-brand;
             }
         }
     }
