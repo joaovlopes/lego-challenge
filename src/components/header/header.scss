@@ -2,12 +2,17 @@
 @import '@/styles/variables/fonts.scss';
 
 .headerContainer {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     height: 5rem;
     padding: 0 1rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    backdrop-filter: blur(5px);
 
     .actionsMenu {
         display: flex;
@@ -26,16 +31,20 @@
             }
 
             .searchIcon, .requestIcon {
-                @include sizeIconDefault()
+                @include sizeIconDefault();
             }
 
             .categoryText, .actionText {
                 font-size: 0.8125rem;
             }
 
-            .categoriesIcon, .categoryText:hover {
+            :hover {
                 color: $blue-brand;
             }
+        }
+
+        .contactAction {
+            display: none;
         }
     }
 
@@ -46,6 +55,10 @@
         &Drawer {
             padding: 1.25rem 1rem;
         }
+    }
+
+    .centerMenuCategories {
+        display: none;
     }
 }
 
@@ -64,25 +77,32 @@
 #menu {
     margin-bottom: 2rem;
 
-    .sectionMenu {
+    .sectionMenu, .sectionMenuBrand {
         .sectionOption {
             display: flex;
             align-items: center;
             gap: 1rem;
             
             img {
-                @include sizeIconDefault()
+                @include sizeIconDefault();
+            }
+
+            .sectionText {
+                @include h4-desktop-default();
             }
         }
     
         .listItemButton {
             padding: 0.5rem 1rem;
+            
+            .themeText {
+                @include p-large-desktop-default();
+            }
         }
     
         .sectionBrand {
             text-align: center;
             align-items: center;
-    
             border-top: 0.5px $blue-xlight solid;
     
             &:last-child {
@@ -92,6 +112,8 @@
     }
 
     .sectionTitle {
+        @include p-large-desktop-default();
+
         &::before {
             content: "";
             height: 0.5px;
@@ -108,14 +130,99 @@
 }
 
 @media (min-width: 1024px) {
+    .headerContainer {
+        padding: 0 7rem;
+
+        .actionsMenu {
+            .contactAction {
+                display: flex;
+            }
+        }
+    }
+
     #menu {
         display: flex;
         flex-direction: row;
+        margin: 0;
+
+        .brandLogoDrawer {
+            padding-left: 7rem;
+        }
+
+        .sectionMenu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .listItemButton {
+                padding: 0 1rem 0 7rem;
+                margin-right: 1rem;
+
+                &::before {
+                    z-index: -1;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $blue-xlight;
+                    transition: all 0.5s ease;
+                }
+                
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .listMenu {
+            height: 100vh;
+            width: 40%;
+        }
 
         .sectionMenuBrand {
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+            padding: 0;
+
+            .sectionBrand {
+                align-content: center;
+                border-left: 0.5px solid $blue-xlight;
+
+                &:hover {
+                    background-image: url('@/assets/backgrounds/backgroundHoverMenu.png');
+                }
+            }
+        }
+    }
+
+    .sectionTitle {
+        margin: 2.5rem 0 1.5rem;
+        &::before {
+            width: 7rem !important;        
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .headerContainer {
+        .centerMenuCategories {
+            display: block;
+            display: flex;
+            gap: 1rem;
+
+            @include p-desktop-default();
+
+            a {
+                text-decoration: none;
+                color: $text-one;
+
+                &:hover {
+                    color: $blue-brand;
+                }
+            }
         }
     }
 }

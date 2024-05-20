@@ -22,13 +22,15 @@ export const MainPublications = [
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: GiftingImage,
+          side: 'left'
         },
         {
-          title: 'Gifts for Mom',
-          text: '',
+          title: '',
+          text: 'Gifts for Mom',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: '',
           image: GiftsForMomImage,
+          side: 'right'
         },
       ]
     },
@@ -42,13 +44,15 @@ export const MainPublications = [
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: TravelImage,
+          side: 'left'
         },
         {
-          title: 'Fun accessories to take with you on your travels or keep kids entertained',
-          text: '',
+          title: '',
+          text: 'Fun accessories to take with you on your travels or keep kids entertained',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: '',
           image: AcessoryKidImage,
+          side: 'right'
         },
       ]
     },
@@ -62,12 +66,13 @@ export const MainPublications = [
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: AdultsWelcomeImage,
+          side: 'left'
         },
       ]
     },
     {
       name: 'artAndHomeDecor',
-      style: 'background-color-three',
+      style: 'gray-brand',
       posts: [
         {
           title: 'ART & HOME DECOR',
@@ -75,12 +80,13 @@ export const MainPublications = [
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: ArtAndHomeDecorImage,
+          side: 'right'
         },
       ]
     },
     {
       name: 'space',
-      style: 'black',
+      style: 'black-brand',
       posts: [
         {
           title: 'SPACE',
@@ -88,12 +94,13 @@ export const MainPublications = [
           description: 'In the last 30 years, nothing has taken us deeper into space – or better shaped the way we see the universe – than the Hubble Space Telescope.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: SpaceImage,
+          side: 'left'
         },
       ]
     },
     {
       name: 'popCulture',
-      style: '#FC36A5',
+      style: 'pink-brand',
       posts: [
         {
           title: 'POP CULTURE',
@@ -101,6 +108,7 @@ export const MainPublications = [
           description: 'In the last 30 years, nothing has taken us deeper into space – or better shaped the way we see the universe – than the Hubble Space Telescope.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: PopCultureImage,
+          side: 'right'
         },
       ]
     },
@@ -114,13 +122,15 @@ export const MainPublications = [
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: ToddlersImage,
+          side: 'left'
         },
         {
-          title: 'xx TBD',
-          text: '',
+          title: '',
+          text: 'xx TBD',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: '',
           image: ToddlersKidsImage,
+          side: 'right'
         },
       ]
     },
@@ -134,13 +144,15 @@ export const MainPublications = [
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           image: RpgImage,
+          side: 'left'
         },
         {
-          title: 'xxxxx TBD',
-          text: '',
+          title: '',
+          text: 'xxxxx TBD',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.',
           shortSummary: '',
           image: RpgLegoImage,
+          side: 'right'
         },
       ]
     },

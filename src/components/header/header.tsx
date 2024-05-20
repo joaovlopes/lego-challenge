@@ -4,11 +4,11 @@ import brandLogo from '@/assets/brands/brandLogo.png'
 import categoriesIcon from '@/assets/icons/categoriesIcon.png'
 import searchIcon from '@/assets/icons/searchIcon.png'
 import requestIcon from '@/assets/icons/requestIcon.png';
+import contactIcon from '@/assets/icons/contactIcon.png';
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -27,8 +27,8 @@ function Header() {
     };
 
     const DrawerList = (
-        <Box role="presentation" onClick={toggleDrawer(false)} id="menu">
-          <div>
+        <Box role="presentation" onClick={toggleDrawer(false)} id="menu" sx={{ height: 1/1 }}>
+          <div className='listMenu'>
             <div className='brandLogoDrawer'>
                 <img 
                     src={brandLogo} 
@@ -36,7 +36,7 @@ function Header() {
                 />
                 <CloseOutlinedIcon className='closeOutlinedIcon'/>
             </div>
-            <List className='sectionMenu'>
+            <div className='sectionMenu'>
                 {SectionsMenu.map((section) => (
                 <ListItem key={section.name} disablePadding>
                     <ListItemButton className='sectionOption listItemButton'>
@@ -44,39 +44,39 @@ function Header() {
                             src={section.icon} 
                             alt=""
                         />
-                        <ListItemText primary={section.text}/>
+                        <ListItemText primary={section.text} className='sectionText'/>
                     </ListItemButton>
                 </ListItem>
                 ))}
-            </List>
+            </div>
 
             <div>
                 <h3 className='sectionTitle'>Themes</h3>
             </div>
 
-            <List className='sectionMenu'>
+            <div className='sectionMenu'>
                 {ThemesMenu.map((theme) => (
                 <ListItem key={theme.name} disablePadding>
                     <ListItemButton className='listItemButton'>
-                    <ListItemText primary={theme.text}/>
+                        <ListItemText primary={theme.text} className='themeText'/>
                     </ListItemButton>
                 </ListItem>
                 ))}
-            </List>
+            </div>
           </div>
 
-          <List className='sectionMenu sectionMenuBrand'>
+          <div className='sectionMenuBrand'>
             {BrandsMenu.map((brand) => (
               <div className='sectionBrand' key={brand.name}>
                 <img src={brand.image} alt={brand.name + 'Brand image'} />
               </div>
             ))}
-          </List>
+          </div>
         </Box>
       );
 
     return (
-        <div className='headerContainer'>
+        <header className='headerContainer'>
             <Drawer 
                 anchor={'top'} 
                 open={open} 
@@ -105,7 +105,32 @@ function Header() {
                 </div>
             </div>
 
+
+            <div className='centerMenuCategories'>
+                {ThemesMenu.map((themes) => (
+                    <a 
+                        rel="stylesheet" 
+                        href="#" 
+                        key={themes.name}
+                    >
+                        {themes.text}
+                    </a>
+                ))}
+            </div>
+
+
             <div className='actionsMenu'>
+                <div 
+                    className='actionOption contactAction'
+                    onClick={toggleDrawer(true)}    
+                >
+                    <img 
+                        src={contactIcon} 
+                        alt="Contact icon"
+                        className='contactIcon'
+                    />
+                    <span className='actionText'>Contact us</span>
+                </div>
                 <div 
                     className='actionOption'
                     onClick={toggleDrawer(true)}    
@@ -130,7 +155,7 @@ function Header() {
                     <span className='actionText'>Request</span>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

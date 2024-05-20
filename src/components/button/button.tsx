@@ -1,5 +1,5 @@
 import './button.scss';
-import ArrowRight from '@/assets/icons/arrow-right.png';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function ButtonDefault () {
     return (
@@ -8,7 +8,7 @@ function ButtonDefault () {
                 className='button'
             >
                 View details
-                <img src={ArrowRight} alt="" />
+                <ArrowForwardIcon sx={{ fontSize: 16 }}/>
             </button>
         </div>
     )
