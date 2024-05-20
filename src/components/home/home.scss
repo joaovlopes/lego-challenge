@@ -1,4 +1,5 @@
 @import '@/styles/variables/colors.scss';
+@import '@/styles/variables/fonts.scss';
 
 h1 {
     color: $text-one;
@@ -7,6 +8,29 @@ h1 {
 .videoTeste {
     text-align: center;
     place-content: center;
-    background-color: $blue-brand;
+    background-color: $background-color-three;
     height: 375px;
+}
+
+.homeContainer {
+    .titleMain {
+        @include h1-mobile-default;
+        padding: 1rem 1rem 3rem;
+    }
+
+    .contentMain {
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+    }
+
+    footer {
+        padding: 1.5rem;
+
+        p {
+            @include p-small-desktop-default();
+            color: $text-three;
+            text-align: center;
+        }
+    }
 }

@@ -1,16 +1,9 @@
 @import '@/styles/variables/colors.scss';
-
-$widthIconDefault: 1.5rem;
-$heightIconDefault: 1.5rem;
-
-@mixin sizeIconDefault ($width, $height) {
-    width: $width;
-    height: $height;
-}
+@import '@/styles/variables/fonts.scss';
 
 .headerContainer {
     height: 5rem;
-    padding: 0 5%;
+    padding: 0 1rem;
 
     display: flex;
     justify-content: space-between;
@@ -18,7 +11,7 @@ $heightIconDefault: 1.5rem;
 
     .actionsMenu {
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
 
         .actionOption {
             display: flex;
@@ -33,10 +26,10 @@ $heightIconDefault: 1.5rem;
             }
 
             .searchIcon, .requestIcon {
-                @include sizeIconDefault($widthIconDefault, $heightIconDefault)
+                @include sizeIconDefault()
             }
 
-            .categoryText {
+            .categoryText, .actionText {
                 font-size: 0.8125rem;
             }
 
@@ -51,7 +44,7 @@ $heightIconDefault: 1.5rem;
         height: 2.5rem;
 
         &Drawer {
-            padding: 1.25rem 5%;
+            padding: 1.25rem 1rem;
         }
     }
 }
@@ -61,32 +54,68 @@ $heightIconDefault: 1.5rem;
     align-items: center;
     gap: 2rem;
 
-    padding: 1.25rem 5%;
+    padding: 1.25rem 1rem;
 
     .closeOutlinedIcon {
         cursor: pointer;
     }
 }
 
-.sectionMenu {
-    .sectionOption {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+#menu {
+    margin-bottom: 2rem;
 
-        img {
-            @include sizeIconDefault($widthIconDefault, $heightIconDefault)
+    .sectionMenu {
+        .sectionOption {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+            img {
+                @include sizeIconDefault()
+            }
+        }
+    
+        .listItemButton {
+            padding: 0.5rem 1rem;
+        }
+    
+        .sectionBrand {
+            text-align: center;
+            align-items: center;
+    
+            border-top: 0.5px $blue-xlight solid;
+    
+            &:last-child {
+                border-bottom: 0.5px $blue-xlight solid;
+            }
         }
     }
 
-    .sectionBrand {
-        text-align: center;
-        align-items: center;
+    .sectionTitle {
+        &::before {
+            content: "";
+            height: 0.5px;
+            width: 1rem;
+            background-color: black;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            margin-right: 7px;
+        }
+    }
 
-        border-top: 0.5px $blue-xlight solid;
+    
+}
 
-        &:last-child {
-            border-bottom: 0.5px $blue-xlight solid;
+@media (min-width: 1024px) {
+    #menu {
+        display: flex;
+        flex-direction: row;
+
+        .sectionMenuBrand {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 }
