@@ -1,0 +1,21 @@
+@import '@/styles/variables/colors.scss';
+@import '@/styles/variables/fonts.scss';
+
+footer {
+    padding: 1.5rem;
+
+    p {
+        @include p-small-desktop-default();
+        color: $text-three;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+    
+        p {
+            font-size: 12px;
+        }
+    }
+}
